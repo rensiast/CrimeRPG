@@ -83,8 +83,6 @@ public abstract class Case {
 
 - Implementation details hidden from game loop
 
-- Clean separation between interface and implementation
-
 ### 5. **Exception Handling**
 
 ```java
