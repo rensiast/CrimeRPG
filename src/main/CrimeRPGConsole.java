@@ -14,10 +14,10 @@ public class CrimeRPGConsole {
 
             boolean playing = true;
             while (playing) {
-                System.out.println("\n" + "═══════════════════════════════════════");
+                System.out.println("\n" + "═════════════════════════════════════════════");
                 System.out.println(ColorUtil.info("👮 Detective " + player.getName() + " - Hearts: "
                         + player.getHearts() + " | Coins: " + player.getCoins()));
-                System.out.println("═══════════════════════════════════════");
+                System.out.println("═════════════════════════════════════════════");
 
                 Case selectedCase = selectCase(scanner);
                 if (selectedCase == null) {
