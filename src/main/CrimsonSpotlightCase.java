@@ -28,13 +28,13 @@ public class CrimsonSpotlightCase extends Case {
 
         switch (choice) {
             case "1" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: The stalker might work with printing or packaging"));
+                System.out.println(ColorUtil.clue("Clue: The stalker might work with printing or packaging"));
             }
             case "2" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: Multiple suspects emerging"));
+                System.out.println(ColorUtil.clue("Clue: Multiple suspects emerging"));
             }
             case "3" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: The stalker has studied the building layout"));
+                System.out.println(ColorUtil.clue("Clue: The stalker has studied the building layout"));
             }
             default -> {
                 System.out.println(ColorUtil.warning("You waste time deciding..."));
@@ -58,11 +58,11 @@ public class CrimsonSpotlightCase extends Case {
         boolean foundKeyClue = false;
         switch (choice) {
             case "1", "3", "4" -> {
-                System.out.println(ColorUtil.clue("🔍 Major Clue: Kenji is acting suspiciously!"));
+                System.out.println(ColorUtil.clue("Major Clue: Kenji is acting suspiciously!"));
                 foundKeyClue = true;
             }
             case "2" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: Kaito might not be the stalker"));
+                System.out.println(ColorUtil.clue("Clue: Kaito might not be the stalker"));
             }
             default -> {
                 System.out.println(ColorUtil.error("Poor investigation choice wastes critical time..."));
@@ -86,20 +86,20 @@ public class CrimsonSpotlightCase extends Case {
 
             switch (choice) {
                 case "1" -> {
-                    System.out.println(ColorUtil.success("✅ Professional approach! Case closed perfectly!"));
+                    System.out.println(ColorUtil.success("Professional approach! Case closed perfectly!"));
                     player.addCoins(100);
                 }
                 case "2" -> {
-                    System.out.println(ColorUtil.warning("⚠️ Risky move! You get a minor injury."));
+                    System.out.println(ColorUtil.warning("Risky move! You get a minor injury."));
                     player.loseHeart();
                     player.addCoins(75);
                 }
                 case "3" -> {
-                    System.out.println(ColorUtil.success("🎯 Smart thinking! Solid evidence ensures conviction!"));
+                    System.out.println(ColorUtil.success("Smart thinking! Solid evidence ensures conviction!"));
                     player.addCoins(90);
                 }
                 default -> {
-                    System.out.println(ColorUtil.error("❌ Hesitation costs you!"));
+                    System.out.println(ColorUtil.error("Hesitation costs you!"));
                     player.loseHeart();
                     player.addCoins(50);
                 }
@@ -115,9 +115,9 @@ public class CrimsonSpotlightCase extends Case {
         System.out.println("═══════════════════════════════════════");
 
         if (foundKeyClue) {
-            System.out.println(ColorUtil.success("🎉 Excellent work! You solved the case professionally."));
+            System.out.println(ColorUtil.success("Excellent work! You solved the case professionally."));
         } else {
-            System.out.println(ColorUtil.warning("⚠️ Case solved, but your reputation took a hit."));
+            System.out.println(ColorUtil.warning("Case solved, but your reputation took a hit."));
         }
 
         System.out.println(ColorUtil.info("\nHearts: " + player.getHearts() + " | Coins: " + player.getCoins()));
@@ -129,7 +129,7 @@ public class CrimsonSpotlightCase extends Case {
         if (choice.equals("hint")) {
             if (player.getCoins() >= 10) {
                 player.loseCoins(10);
-                System.out.println(ColorUtil.clue("💡 Hint: Look for patterns in timing and access."));
+                System.out.println(ColorUtil.clue("Hint: Look for patterns in timing and access."));
                 System.out.println("Coins left: " + player.getCoins());
                 System.out.println("Choose an option (1-3):");
                 choice = scanner.nextLine().trim().toLowerCase();

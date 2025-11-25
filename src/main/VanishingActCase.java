@@ -31,19 +31,19 @@ public class VanishingActCase extends Case {
         int personalClues = 0;
         switch (choice) {
             case "1" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: Inside job or professional involvement"));
+                System.out.println(ColorUtil.clue("Clue: Inside job or professional involvement"));
                 personalClues++;
             }
             case "2" -> {
-                System.out.println(ColorUtil.clue("🔍 Major Clue: Massive financial motive"));
+                System.out.println(ColorUtil.clue("Major Clue: Massive financial motive"));
                 financialClues += 2;
             }
             case "3" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: Robert was preparing for something"));
+                System.out.println(ColorUtil.clue("Clue: Robert was preparing for something"));
                 personalClues++;
             }
             case "4" -> {
-                System.out.println(ColorUtil.error("❌ Major Time Waste on false leads!"));
+                System.out.println(ColorUtil.error("Major Time Waste on false leads!"));
                 player.loseHeart();
             }
             default -> {
@@ -69,19 +69,19 @@ public class VanishingActCase extends Case {
         boolean foundSmokingGun = false;
         switch (choice) {
             case "1" -> {
-                System.out.println(ColorUtil.clue("🔍 Smoking Gun: Robert planned this for months!"));
+                System.out.println(ColorUtil.clue("Smoking Gun: Robert planned this for months!"));
                 foundSmokingGun = true;
             }
             case "2" -> {
-                System.out.println(ColorUtil.clue("🔍 Strong Evidence: Financial crime confirmed"));
+                System.out.println(ColorUtil.clue("Strong Evidence: Financial crime confirmed"));
                 financialClues += 2;
             }
             case "3" -> {
-                System.out.println(ColorUtil.error("❌ Critical Error: Alienated potential help!"));
+                System.out.println(ColorUtil.error("Critical Error: Alienated potential help!"));
                 player.loseHeart();
             }
             case "4" -> {
-                System.out.println(ColorUtil.clue("🔍 Suspicious: Wife might be involved"));
+                System.out.println(ColorUtil.clue("Suspicious: Wife might be involved"));
                 personalClues++;
             }
             default -> {
@@ -109,25 +109,25 @@ public class VanishingActCase extends Case {
 
             switch (choice) {
                 case "1" -> {
-                    System.out.println(ColorUtil.success("✅ Perfect execution! Full recovery of funds."));
+                    System.out.println(ColorUtil.success("Perfect execution! Full recovery of funds."));
                     player.addCoins(200);
                 }
                 case "2" -> {
-                    System.out.println(ColorUtil.success("🎯 Clever strategy! Case solved with minimal risk."));
+                    System.out.println(ColorUtil.success("Clever strategy! Case solved with minimal risk."));
                     player.addCoins(180);
                 }
                 case "3" -> {
-                    System.out.println(ColorUtil.warning("⚠️ Patient approach... successful but close call."));
+                    System.out.println(ColorUtil.warning("Patient approach... successful but close call."));
                     player.addCoins(160);
                 }
                 case "4" -> {
-                    System.out.println(ColorUtil.error("💀 Reckless confrontation! Seriously wounded."));
+                    System.out.println(ColorUtil.error("Reckless confrontation! Seriously wounded."));
                     player.loseHeart();
                     player.loseHeart();
                     player.addCoins(120);
                 }
                 default -> {
-                    System.out.println(ColorUtil.error("❌ Bungled arrest! Failed immediate capture."));
+                    System.out.println(ColorUtil.error("Bungled arrest! Failed immediate capture."));
                     player.loseHeart();
                     player.addCoins(80);
                 }
@@ -145,9 +145,9 @@ public class VanishingActCase extends Case {
         System.out.println("═══════════════════════════════════════");
 
         if (hasEnoughEvidence) {
-            System.out.println(ColorUtil.success("🎉 Masterful work! Solved toughest case of your career."));
+            System.out.println(ColorUtil.success("Masterful work! Solved toughest case of your career."));
         } else {
-            System.out.println(ColorUtil.warning("⚠️ Hard lesson learned. Some cases can't be won."));
+            System.out.println(ColorUtil.warning("Hard lesson learned. Some cases can't be won."));
         }
 
         System.out.println(ColorUtil.info("\nHearts: " + player.getHearts() + " | Coins: " + player.getCoins()));
@@ -159,7 +159,7 @@ public class VanishingActCase extends Case {
         if (choice.equals("hint")) {
             if (player.getCoins() >= 20) {
                 player.loseCoins(20);
-                System.out.println(ColorUtil.clue("💡 Hint: Follow the money and look for preparations."));
+                System.out.println(ColorUtil.clue("Hint: Follow the money and look for preparations."));
                 System.out.println("Coins left: " + player.getCoins());
                 System.out.println("Choose an option (1-4):");
                 choice = scanner.nextLine().trim().toLowerCase();

@@ -31,20 +31,20 @@ public class MidnightStalkerCase extends Case {
         int cluesFound = 0;
         switch (choice) {
             case "1" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: Stalker knows campus well, possibly works here"));
+                System.out.println(ColorUtil.clue("Clue: Stalker knows campus well, possibly works here"));
                 cluesFound++;
             }
             case "2" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: Stalker has insider knowledge of camera locations"));
+                System.out.println(ColorUtil.clue("Clue: Stalker has insider knowledge of camera locations"));
                 cluesFound++;
             }
             case "3" -> {
                 System.out.println(
-                        ColorUtil.clue("🔍 Major Clue: Stalker has artistic skill and access to art supplies"));
+                        ColorUtil.clue("Major Clue: Stalker has artistic skill and access to art supplies"));
                 cluesFound += 2;
             }
             case "4" -> {
-                System.out.println(ColorUtil.clue("🔍 Clue: Stalker might be female, uses maintenance access"));
+                System.out.println(ColorUtil.clue("Clue: Stalker might be female, uses maintenance access"));
                 cluesFound++;
             }
             default -> {
@@ -77,18 +77,18 @@ public class MidnightStalkerCase extends Case {
         boolean identifiedStalker = false;
         switch (choice) {
             case "1" -> {
-                System.out.println(ColorUtil.clue("🔍 Strong Evidence: Henderson is your prime suspect!"));
+                System.out.println(ColorUtil.clue("Strong Evidence: Henderson is your prime suspect!"));
                 identifiedStalker = true;
             }
             case "2" -> {
-                System.out.println(ColorUtil.clue("🔍 Suspicious: Lisa has means and motive"));
+                System.out.println(ColorUtil.clue("Suspicious: Lisa has means and motive"));
                 cluesFound++;
             }
             case "3" -> {
-                System.out.println(ColorUtil.clue("🔍 Unlikely: Professor has solid alibis"));
+                System.out.println(ColorUtil.clue("Unlikely: Professor has solid alibis"));
             }
             case "4" -> {
-                System.out.println(ColorUtil.error("❌ Critical Mistake: You alerted the real stalker!"));
+                System.out.println(ColorUtil.error("Critical Mistake: You alerted the real stalker!"));
                 player.loseHeart();
             }
             default -> {
@@ -113,20 +113,20 @@ public class MidnightStalkerCase extends Case {
 
             switch (choice) {
                 case "1" -> {
-                    System.out.println(ColorUtil.success("✅ Professional takedown!"));
+                    System.out.println(ColorUtil.success("Professional takedown!"));
                     player.addCoins(120);
                 }
                 case "2" -> {
-                    System.out.println(ColorUtil.warning("⚠️ Dangerous confrontation! You take injuries."));
+                    System.out.println(ColorUtil.warning("Dangerous confrontation! You take injuries."));
                     player.loseHeart();
                     player.addCoins(100);
                 }
                 case "3" -> {
-                    System.out.println(ColorUtil.success("🎯 Brilliant strategy! Solid evidence ensures sentencing."));
+                    System.out.println(ColorUtil.success("Brilliant strategy! Solid evidence ensures sentencing."));
                     player.addCoins(140);
                 }
                 default -> {
-                    System.out.println(ColorUtil.error("❌ Poor execution! Henderson escapes and injures a student."));
+                    System.out.println(ColorUtil.error("Poor execution! Henderson escapes and injures a student."));
                     player.loseHeart();
                     player.addCoins(80);
                 }
@@ -143,9 +143,9 @@ public class MidnightStalkerCase extends Case {
         System.out.println("═══════════════════════════════════════");
 
         if (identifiedStalker) {
-            System.out.println(ColorUtil.success("🎉 Excellent detective work! You stopped a dangerous predator."));
+            System.out.println(ColorUtil.success("Excellent detective work! You stopped a dangerous predator."));
         } else {
-            System.out.println(ColorUtil.warning("⚠️ Partial success. The stalker is gone for now, but not caught."));
+            System.out.println(ColorUtil.warning("Partial success. The stalker is gone for now, but not caught."));
         }
 
         System.out.println(ColorUtil.info("\nHearts: " + player.getHearts() + " | Coins: " + player.getCoins()));
@@ -158,7 +158,7 @@ public class MidnightStalkerCase extends Case {
             if (player.getCoins() >= 15) {
                 player.loseCoins(15);
                 System.out
-                        .println(ColorUtil.clue("💡 Hint: Look for someone with campus access and artistic ability."));
+                        .println(ColorUtil.clue("Hint: Look for someone with campus access and artistic ability."));
                 System.out.println("Coins left: " + player.getCoins());
                 System.out.println("Choose an option (1-4):");
                 choice = scanner.nextLine().trim().toLowerCase();
