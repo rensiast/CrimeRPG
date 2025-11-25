@@ -153,7 +153,7 @@ CrimeRPG/
 
 - **Pateña, Kersten Therese R.**
 
-- **Ramirez,Justine, M.**
+- **Ramirez, Justine M.**
 
 ## Acknowledgements
 
