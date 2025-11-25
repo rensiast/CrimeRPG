@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CrimeRPGConsole {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println(ColorUtil.info("Welcome to Crimson Spotlight – Detective RPG"));
+            System.out.println(ColorUtil.info("Welcome to Crime – Detective RPG"));
 
             System.out.print("\nEnter your detective name: ");
             String name = scanner.nextLine().trim();
