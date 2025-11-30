@@ -4,7 +4,7 @@ public class CrimeRPGConsole {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println();
-            System.out.println(ColorUtil.success("Welcome to Crime RPG - Detective Mystery Game!"));
+            System.out.println(ColorUtil.success("Welcome to CaseCrack: A Crime RPG - Detective Mystery Game!"));
 
             System.out.print("\nEnter your detective name: ");
             String name = scanner.nextLine().trim();
