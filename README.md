@@ -61,7 +61,7 @@ public class CrimsonSpotlightCase extends Case {
 
 ```java
 Case selectedCase = new CrimsonSpotlightCase();
-selectedCase.playCase(player, scanner);  // Dynamic method dispatch
+selectedCase.playCase(player, scanner);
 ```
 
 - Same interface (**playCase()**) with different implementations
