@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Second Case/Storyline - Medium Mode
 public class MidnightStalkerCase extends Case {
 
     public MidnightStalkerCase() {

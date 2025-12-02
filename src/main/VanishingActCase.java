@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Thirs Case/Storyline - Hard Mode
 public class VanishingActCase extends Case {
 
     public VanishingActCase() {

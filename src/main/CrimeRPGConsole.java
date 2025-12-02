@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Main Console
 public class CrimeRPGConsole {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
@@ -20,6 +21,7 @@ public class CrimeRPGConsole {
                         + player.getHearts() + " | Coins: " + player.getCoins()));
                 System.out.println("═════════════════════════════════════════════");
 
+                // Selecting Case
                 Case selectedCase = selectCase(scanner);
                 if (selectedCase == null) {
                     playing = false;
@@ -29,11 +31,13 @@ public class CrimeRPGConsole {
                 System.out.println("\n" + ColorUtil.info("Selected Case: " + selectedCase.title));
                 selectedCase.playCase(player, scanner);
 
+                // If User Fails to Solve the Crime
                 if (player.getHearts() <= 0) {
                     System.out.println("\n" + ColorUtil.error("Case failed! But you can try another case."));
                     player = new Player(name, 3);
                 }
 
+                // If User Wishes to Continue Playing the Same Case/Other Case
                 System.out.println("\n" + "Continue playing? (yes/no)");
                 String continueChoice = scanner.nextLine().trim().toLowerCase();
                 if (continueChoice.equals("no") || continueChoice.equals("n")) {
@@ -45,6 +49,7 @@ public class CrimeRPGConsole {
         }
     }
 
+    // Method for User's Case Selection
     private static Case selectCase(Scanner scanner) {
         while (true) {
             try {

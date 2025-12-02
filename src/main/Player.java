@@ -1,4 +1,5 @@
 public class Player {
+    // User's info and stats
     private final String name;
     private int hearts;
     private int coins = 50;
@@ -7,6 +8,8 @@ public class Player {
         this.name = name;
         this.hearts = hearts;
     }
+
+    // Setters and Getters for the User's Stats
 
     public String getName() {
         return name;

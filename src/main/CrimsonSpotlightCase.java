@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// First Case/Storyline - Easy Mode
 public class CrimsonSpotlightCase extends Case {
 
     public CrimsonSpotlightCase() {
